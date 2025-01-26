@@ -17,7 +17,7 @@ export default function FAQ() {
   ];
 
   return (
-    <div className="min-h-screen bg-[url('/images/test.jpg')] bg-cover bg-center bg-fixed flex justify-center items-center">
+    <div className="min-h-screen  bg-center bg-fixed flex justify-center items-center">
       <Card title="Frequently Asked Questions">
         <div className="space-y-6">
           {faqs.map((faq, index) => (

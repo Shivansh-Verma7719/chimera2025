@@ -3,7 +3,7 @@ import Card from "@/components/Card";
 
 export default function Contact() {
   return (
-    <div className="min-h-screen bg-[url('/images/test.jpg')] bg-cover bg-center bg-fixed flex justify-center items-center">
+    <div className="min-h-screen  bg-center bg-fixed flex justify-center items-center">
       <Card title="Contact Us">
         <p className="text-white-700">
           <strong>Address:</strong> IEEE Student Branch, Ashoka University,

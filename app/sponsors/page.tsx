@@ -10,14 +10,14 @@ export default function Sponsors() {
   ];
 
   return (
-    <div className="min-h-screen bg-[url('/images/test.jpg')] bg-cover bg-center bg-fixed flex justify-center items-center">
+    <div className="min-h-screen  bg-center bg-fixed flex justify-center items-center">
     
       <Card title="Our Sponsors">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {sponsors.map((sponsor, index) => (
             <div
               key={index}
-              className="flex items-center space-x-4 p-4 bg-gray-50 rounded-md shadow-sm"
+              className="flex items-center space-x-4 p-4 rounded-md shadow-sm"
             >
               <img
                 src={sponsor.logo}
