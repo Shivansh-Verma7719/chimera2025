@@ -1,7 +1,9 @@
+/* globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* Light and Dark Theme Variables */
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,14 +16,20 @@
   }
 }
 
+/* Global Defaults */
 html,
 body {
   margin: 0;
   padding: 0;
   height: 100%;
   overflow: hidden;
+  background-color: var(--background); /* Use your variables */
+  color: var(--foreground);
 }
 
+
+
+/* Gradient Animation (if applicable) */
 .bg-gradient-to-r {
   animation: gradient-animation 20s ease infinite;
 }
@@ -38,3 +46,19 @@ body {
   }
 }
 
+
+main .content {
+  text-align: justify;
+  width: 65%;
+  text-align: start;
+  padding-left: 30px;
+  padding-right: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  border: 1px solid #99a1b328;
+  word-wrap: break-word;
+  background: rgba(12, 9, 60, 0.7);
+  background: -webkit-radial-gradient(rgba(12, 9, 60, 0.7), rgba(12, 9, 60, 0.7), rgba(12, 9, 60, 0.7));
+  background: radial-gradient(rgba(12, 9, 60, 0.7), rgba(12, 9, 60, 0.7), rgba(12, 9, 60, 0.7));
+  box-shadow: 0 0px 35px rgba(0, 0, 0, 0.25), 0 0px 20px rgba(0, 0, 0, 0.22);
+}

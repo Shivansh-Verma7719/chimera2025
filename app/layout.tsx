@@ -2,6 +2,8 @@
 import React, { useEffect } from "react";
 import "./globals.css";
 import ChimeraNavbar from "@/components/Navbar";
+
+
 export default function RootLayout({
   children,
 }: {
@@ -132,6 +134,7 @@ export default function RootLayout({
         <ChimeraNavbar />
         <canvas id="dotsCanvas" className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
         <main className="relative z-10">{children}</main>
+        
       </body>
     </html>
   );
