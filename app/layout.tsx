@@ -121,11 +121,16 @@ export default function RootLayout({
 
   return (
     <html lang="en" className="h-full w-full">
-      <body className="overflow-hidden h-full w-full relative bg-[url('/images/test.jpg')] bg-cover bg-center bg-fixed flex flex-col">
+      <body className="flex flex-col min-h-screen w-full bg-[url('/images/test.jpg')] bg-cover bg-center bg-fixed">
         <ChimeraNavbar />
-        <canvas id="dotsCanvas" className="absolute top-0 left-0 w-full h-full z-0 pointer-events-none"></canvas>
-        <main className="flex-grow relative z-10">{children}</main>
-        <Footer />
+        <canvas
+          id="dotsCanvas"
+          className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
+        />
+        <div className="flex-1 relative z-10 overflow-y-auto pt-40">
+          <main className="min-h-[calc(100vh-4rem)]">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
