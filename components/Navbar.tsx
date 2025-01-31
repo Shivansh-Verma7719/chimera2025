@@ -1,10 +1,37 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function ChimeraNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        isMenuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    // Add both mouse and touch event listeners
+    document.addEventListener("mousedown", handleClickOutside);
+    document.addEventListener("touchstart", handleClickOutside);
+
+    return () => {
+      // Clean up both listeners
+      document.removeEventListener("mousedown", handleClickOutside);
+      document.removeEventListener("touchstart", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   const menuItems = [
     { name: "About", href: "/about" },
@@ -19,8 +46,15 @@ export default function ChimeraNavbar() {
   ];
 
   return (
-    <nav className="fixed w-full bg-transparent z-50 px-4">
-      <div className="mx-auto flex items-center justify-between">
+    <motion.nav
+      animate={{
+        backgroundColor: isMenuOpen ? "rgba(0, 0, 0, 0.7)" : "transparent",
+        backdropFilter: isMenuOpen ? "blur(12px)" : "blur(0px)",
+      }}
+      transition={{ duration: 0.3 }}
+      className="fixed w-full z-50"
+    >
+      <div className="mx-auto flex items-center justify-between px-4">
         {/* Left - Chimera Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image
@@ -62,6 +96,7 @@ export default function ChimeraNavbar() {
 
         {/* Mobile Menu Button */}
         <button
+          ref={buttonRef}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden p-2 text-white"
           aria-label="Toggle menu"
@@ -84,29 +119,60 @@ export default function ChimeraNavbar() {
         </button>
       </div>
 
-      {/* Mobile Menu (Shown when isMenuOpen is true) */}
-      {isMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-black/90 backdrop-blur-sm">
-          <div className="px-4 py-2 space-y-2">
-            {menuItems.map((item) => (
-              <Link
-                key={item.name}
-                href={item.href}
-                className="block text-white hover:text-gray-300 py-2 transition-colors font-medium"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {item.name}
-              </Link>
-            ))}
-            <Link
-              href="/register"
-              className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors mt-4"
+      {/* Mobile Menu (Animated) */}
+      <AnimatePresence>
+        {isMenuOpen && (
+          <motion.div
+            ref={menuRef}
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="md:hidden absolute top-full left-0 right-0 bg-black/70 backdrop-blur-md"
+            onTouchStart={(e) => e.stopPropagation()}
+          >
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ delay: 0.1, duration: 0.2 }}
+              className="px-4 py-2 space-y-2"
             >
-              Register
-            </Link>
-          </div>
-        </div>
-      )}
-    </nav>
+              {menuItems.map((item, index) => (
+                <motion.div
+                  key={item.name}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -20 }}
+                  transition={{ delay: index * 0.1, duration: 0.2 }}
+                >
+                  <Link
+                    href={item.href}
+                    className="block text-white hover:text-gray-300 py-2 transition-colors font-medium"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </motion.div>
+              ))}
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -20 }}
+                transition={{ delay: menuItems.length * 0.1, duration: 0.2 }}
+              >
+                <Link
+                  href="/register"
+                  className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors mt-4"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  Register
+                </Link>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.nav>
   );
 }
