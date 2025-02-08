@@ -4,9 +4,9 @@ import Card from "@/components/Card";
 
 export default function Home() {
   return (
-    <div className="min-h-screen  bg-center bg-fixed flex justify-center items-center pt-32">
+    <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
       <Card title="About">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 space-mono-regular">
           <div className="space-y-2 max-w-2xl">
             <h1 className="font-mono text-5xl md:text-6xl">CHIMERA 2025</h1>
             <h2 className="font-mono text-3xl text-[#66e9fa]">
@@ -25,8 +25,8 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="space-y-8">
-          <p className="text-xl font-sans leading-relaxed text-[#98a0b3]">
+        <div className="space-y-8 space-mono-regular">
+          <p className="text-xlleading-relaxed text-[#98a0b3]">
             IEEE Ashoka is proud to announce Chimera, an inter-university
             celebration of excellence in STEM research and innovation. Our
             objective is to showcase the work of our university&apos;s students
@@ -35,7 +35,7 @@ export default function Home() {
             is especially unique because:
           </p>
 
-          <ul className="pl-8 text-xl space-y-4 font-sans text-[#98a0b3]">
+          <ul className="pl-8 text-xl space-y-4 text-[#98a0b3]">
             <li className="relative pl-6">
               <span className="absolute left-0">•</span>
               <span className="block pl-2">
@@ -70,10 +70,10 @@ export default function Home() {
 
         {/* Talks and Workshops Section */}
         <div className="pt-9">
-          <h2 className="font-mono text-5xl md:text-3xl mb-3">
+          <h2 className="text-5xl md:text-3xl mb-3">
             Talks and Workshops
           </h2>
-          <p className="text-xl font-sans leading-relaxed text-[#98a0b3]">
+          <p className="text-xl leading-relaxed text-[#98a0b3]">
             Attendees will have the opportunity to engage with professionals and
             industry leaders through enlightening talks and interactive
             workshops, gaining valuable insights into cutting-edge developments
@@ -81,10 +81,10 @@ export default function Home() {
           </p>
         </div>
         <div className="pt-9">
-          <h2 className="font-mono text-5xl md:text-3xl mb-3">
+          <h2 className="text-5xl md:text-3xl mb-3">
             Competitions and Collaboration
           </h2>
-          <p className="text-xl font-sans leading-relaxed text-[#98a0b3]">
+          <p className="text-xl leading-relaxed text-[#98a0b3]">
             We will have multiple high-stakes competitions with prize money over
             2 lakhs, designed to foster hands-on problem-solving skills.
             Additionally, students will get the chance to showcase their ongoing
@@ -92,12 +92,12 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 space-y-5">
-          <h1 className="pt-11 font-sans text-5xl md:text-5xl">WHY CHIMERA?</h1>
-          <p className="text-xl font-sans leading-relaxed text-[#98a0b3] mb-3">
+        <div className="mt-10 space-y-5 spcae-mono-regular">
+          <h1 className="pt-11 text-5xl md:text-5xl space-mono-regular">WHY CHIMERA?</h1>
+          <p className="text-xl leading-relaxed text-[#98a0b3] mb-3 space-mono-regular">
             chimera [kahy-meer-uh]
           </p>
-          <p className="text-xl font-sans leading-relaxed text-[#98a0b3]">
+          <p className="text-xl leading-relaxed text-[#98a0b3] space-mono-regular">
             The chimera, in Greek mythology, is a creature composed of parts
             from different animals, often embodying a fantastical amalgamation
             of features. The chimera is depicted as a fire-breathing monster
@@ -115,8 +115,8 @@ export default function Home() {
         </div>
 
         <div className="mt-10 space-y-5">
-          <h1 className="pt-11 font-sans text-5xl md:text-5xl">IEEE@Ashoka</h1>
-          <p className="text-xl font-sans leading-relaxed text-[#98a0b3]">
+          <h1 className="pt-11 text-5xl md:text-5xl space-mono-regular">IEEE@Ashoka</h1>
+          <p className="text-xl leading-relaxed text-[#98a0b3] space-mono-regular">
             The IEEE Ashoka Student Branch was founded to foster holistic
             development among STEM students at Ashoka University. Our mission is
             to encourage excellence and collaboration across STEM disciplines,

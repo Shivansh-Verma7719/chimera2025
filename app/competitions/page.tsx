@@ -11,6 +11,14 @@ interface Competition {
 }
 
 const competitions: Competition[] = [
+    {
+        id: 'astro-photography',
+        image: '/images/competitions/astro-photography.png'
+    },
+    {
+        id: 'math-expo',
+        image: '/images/competitions/math-expo.png'
+    },
     
 ];
 
