@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { InteractiveHoverButton } from "./ui/Button";
 
 export default function ChimeraNavbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -38,10 +39,10 @@ export default function ChimeraNavbar() {
     { name: "Competitions", href: "/competitions" },
     { name: "Speakers", href: "/speakers" },
     { name: "Schedule", href: "/schedule" },
-    { name: "Raffle", href: "/raffle" },
+    // { name: "Raffle", href: "/raffle" },
     { name: "Team", href: "/team" },
-    { name: "Sponsors", href: "/sponsors" },
-    { name: "FAQ", href: "/faq" },
+    // { name: "Sponsors", href: "/sponsors" },
+    // { name: "FAQ", href: "/faq" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -77,6 +78,9 @@ export default function ChimeraNavbar() {
               {item.name}
             </Link>
           ))}
+          <Link href="/register">
+            <InteractiveHoverButton>Register</InteractiveHoverButton>
+          </Link>
         </div>
 
         {/* Right - Ashoka Logo */}
@@ -163,8 +167,7 @@ export default function ChimeraNavbar() {
               >
                 <Link
                   href="/register"
-                  className="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md transition-colors mt-4"
-                  onClick={() => setIsMenuOpen(false)}
+                  className="block w-full text-center bg-gradient-to-br from-[#5783bb] via-[#4f50af] to-[#8327c3] text-white py-2 px-4 rounded-full transition-colors mt-4"
                 >
                   Register
                 </Link>

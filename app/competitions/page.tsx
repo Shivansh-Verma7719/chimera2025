@@ -11,34 +11,7 @@ interface Competition {
 }
 
 const competitions: Competition[] = [
-    {
-        id: 'datathon',
-        image: '/images/competitions/datathon.png'
-    },
-    {
-        id: 'showcase',
-        image: '/images/competitions/showcase.png'
-    },
-    {
-        id: 'rocket',
-        image: '/images/competitions/rocket.png'
-    },
-    {
-        id: 'stem-bowl',
-        image: '/images/competitions/stem-bowl.png'
-    },
-    {
-        id: 'triathlon',
-        image: '/images/competitions/triathlon.png'
-    },
-    {
-        id: 'speedrun',
-        image: '/images/competitions/speedrun.png'
-    },
-    {
-        id: 'ideathon',
-        image: '/images/competitions/ideathon.png'
-    }
+    
 ];
 
 const CompetitionCard = ({ competition }: { competition: Competition }) => {
@@ -48,8 +21,9 @@ const CompetitionCard = ({ competition }: { competition: Competition }) => {
         <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
+            transition={{ duration: 0.4 }}
             onClick={() => router.push(`/competitions/${competition.id}`)}
-            className="cursor-pointer relative w-full h-[400px] max-w-[500px] overflow-hidden rounded-lg shadow-xl"
+            className="cursor-pointer relative w-full h-[400px] max-w-[500px] overflow-hidden rounded-lg"
         >
             <Image
                 src={competition.image}
@@ -64,10 +38,11 @@ const CompetitionCard = ({ competition }: { competition: Competition }) => {
 
 export default function Competitions() {
     return (
-        <div className="min-h-screen bg-center bg-fixed flex justify-center items-center">
+        <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
             <Card title="Competitions">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-4">
                     {competitions.map((competition) => (
+
                         <CompetitionCard 
                             key={competition.id} 
                             competition={competition}
