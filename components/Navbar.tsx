@@ -78,7 +78,7 @@ export default function ChimeraNavbar() {
               {item.name}
             </Link>
           ))}
-          <Link href="/register">
+          <Link href="/competitions">
             <InteractiveHoverButton>Register</InteractiveHoverButton>
           </Link>
         </div>

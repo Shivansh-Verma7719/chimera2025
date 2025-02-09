@@ -144,3 +144,7 @@ main .content {
 .font-iceland {
   font-family: "iceland";
 }
+
+.font-iceland * {
+  font-family: "iceland";
+}
