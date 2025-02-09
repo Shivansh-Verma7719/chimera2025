@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
       <Card title="About">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 space-mono-regular">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 circularstd">
           <div className="space-y-2 max-w-2xl">
-            <h1 className="font-mono text-5xl md:text-6xl">CHIMERA 2025</h1>
-            <h2 className="font-mono text-3xl text-[#66e9fa]">
-              March 30-31, 2025
+            <h1 className="text-5xl md:text-6xl">CHIMERA 2025</h1>
+            <h2 className="text-3xl text-[#66e9fa]">
+              March 1st, Ashoka University, Sonipat
             </h2>
           </div>
           <div className="w-64 h-64 relative">
@@ -25,8 +25,8 @@ export default function Home() {
         </div>
 
         {/* Main Content */}
-        <div className="space-y-8 space-mono-regular">
-          <p className="text-xlleading-relaxed text-[#98a0b3]">
+        <div className="space-y-8 font-iceland text-xl text-[#98a0b3]">
+          <p className="text-xl">
             IEEE Ashoka is proud to announce Chimera, an inter-university
             celebration of excellence in STEM research and innovation. Our
             objective is to showcase the work of our university&apos;s students
@@ -35,19 +35,17 @@ export default function Home() {
             is especially unique because:
           </p>
 
-          <ul className="pl-8 text-xl space-y-4 text-[#98a0b3]">
+          <ul className="pl-8 text-xl leading-relaxed space-y-4">
             <li className="relative pl-6">
               <span className="absolute left-0">•</span>
               <span className="block pl-2">
-                It includes a wide array of disciplines, aligned with
-                IEEE&apos;s overall goal
+                It includes a wide array of disciplines, aligned with IEEE&apos;s overall goal
               </span>
             </li>
             <li className="relative pl-6">
               <span className="absolute left-0">•</span>
               <span className="block pl-2">
-                It integrates research into the festival, drawing from
-                Ashoka&apos;s rich research-oriented background
+                It integrates research into the festival, drawing from Ashoka&apos;s rich research-oriented background
               </span>
             </li>
 
@@ -56,13 +54,6 @@ export default function Home() {
               <span className="block pl-2">
                 Ashoka&apos;s liberal arts curriculum provides a unique,
                 interdisciplinary background
-              </span>
-            </li>
-            <li className="relative pl-6">
-              <span className="absolute left-0">•</span>
-              <span className="block pl-2">
-                It is the first iteration of many to come, bringing Ashoka to
-                the forefront of STEM research in India
               </span>
             </li>
           </ul>
@@ -92,12 +83,12 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 space-y-5 spcae-mono-regular">
-          <h1 className="pt-11 text-5xl md:text-5xl space-mono-regular">WHY CHIMERA?</h1>
+        <div className="mt-4 space-y-5 circularstd">
+          <h1 className="pt-11 text-5xl md:text-5xl circularstd">WHY CHIMERA?</h1>
           <p className="text-xl leading-relaxed text-[#98a0b3] mb-3 space-mono-regular">
             chimera [kahy-meer-uh]
           </p>
-          <p className="text-xl leading-relaxed text-[#98a0b3] space-mono-regular">
+          <p className="text-xl leading-relaxed text-[#98a0b3] font-iceland">
             The chimera, in Greek mythology, is a creature composed of parts
             from different animals, often embodying a fantastical amalgamation
             of features. The chimera is depicted as a fire-breathing monster
@@ -114,9 +105,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 space-y-5">
-          <h1 className="pt-11 text-5xl md:text-5xl space-mono-regular">IEEE@Ashoka</h1>
-          <p className="text-xl leading-relaxed text-[#98a0b3] space-mono-regular">
+        <div className="mt-4 space-y-5 mb-10">
+          <h1 className="pt-11 text-5xl md:text-5xl circularstd">IEEE@Ashoka</h1>
+          <p className="text-xl leading-relaxed text-[#98a0b3] font-iceland">
             The IEEE Ashoka Student Branch was founded to foster holistic
             development among STEM students at Ashoka University. Our mission is
             to encourage excellence and collaboration across STEM disciplines,
