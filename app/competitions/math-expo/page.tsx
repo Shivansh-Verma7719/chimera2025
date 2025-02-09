@@ -3,11 +3,7 @@
 import React from 'react'
 import Card from '@/components/Card'
 
-import { motion } from 'framer-motion'
-
-import Image from 'next/image';
-
-import { competitions, type Competition, type Round } from '../competitions'
+import { competitions, type Competition } from '../competitions'
 import CompetitionContent from '../competition-content'
 
 const Competition = () => {
