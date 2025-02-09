@@ -31,7 +31,7 @@ const CompetitionCard = ({ competition }: { competition: Competition }) => {
 
 export default function Competitions() {
     return (
-        <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
+        <div className="min-h-screen flex justify-center items-start pt-32">
             <Card title="Competitions">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 p-4">
                     {competitions.map((competition) => (
