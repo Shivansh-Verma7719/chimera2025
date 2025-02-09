@@ -1,32 +1,34 @@
-// app/about/page.tsx
 import Image from "next/image";
 import Card from "@/components/Card";
 
-export default function Home() {
+export default function About() {
   return (
-    <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
+    <div className="min-h-screen bg-center bg-fixed flex justify-center items-start py-24 px-4 sm:px-6 lg:px-8">
       <Card title="About">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 font-iceland">
-          <div className="space-y-2 max-w-2xl">
-            <h1 className="text-5xl md:text-6xl">CHIMERA 2025</h1>
-            <h2 className="text-3xl text-[#66e9fa]">
+        {/* Hero Section */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 font-iceland">
+          <div className="space-y-4 w-full md:w-2/3">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+              CHIMERA 2025
+            </h1>
+            <h2 className="text-2xl sm:text-3xl text-[#66e9fa]">
               March 1st, Ashoka University, Sonipat
             </h2>
           </div>
-          <div className="w-64 h-64 relative">
+          <div className="w-48 h-48 sm:w-64 sm:h-64 relative flex-shrink-0">
             <Image
               src="/images/logo.png"
               alt="Chimera Logo"
-              width={300}
-              height={300}
+              fill
+              priority
               className="object-contain"
             />
           </div>
         </div>
 
-        {/* Main Content */}
-        <div className="space-y-8 font-iceland text-xl text-[#98a0b3]">
-          <p className="text-xl font-iceland leading-relaxed">
+        {/* Introduction */}
+        <div className="space-y-8 font-iceland mt-12">
+          <p className="text-base sm:text-lg lg:text-xl text-[#98a0b3] leading-relaxed">
             IEEE Ashoka is proud to announce Chimera, an inter-university
             celebration of excellence in STEM research and innovation. Our
             objective is to showcase the work of our university&apos;s students
@@ -35,60 +37,54 @@ export default function Home() {
             is especially unique because:
           </p>
 
-          <ul className="pl-8 text-xl leading-relaxed font-iceland space-y-4">
-            <li className="relative pl-6">
-              <span className="absolute left-0">•</span>
-              <span className="block pl-2">
-                It includes a wide array of disciplines, aligned with IEEE&apos;s overall goal
-              </span>
-            </li>
-            <li className="relative pl-6">
-              <span className="absolute left-0">•</span>
-              <span className="block pl-2">
-                It integrates research into the festival, drawing from Ashoka&apos;s rich research-oriented background
-              </span>
-            </li>
-
-            <li className="relative pl-6">
-              <span className="absolute left-0">•</span>
-              <span className="block pl-2">
-                Ashoka&apos;s liberal arts curriculum provides a unique,
-                interdisciplinary background
-              </span>
-            </li>
+          {/* Features List */}
+          <ul className="space-y-4 text-[#98a0b3] pl-4 sm:pl-8">
+            {[
+              "It includes a wide array of disciplines, aligned with IEEE's overall goal",
+              "It integrates research into the festival, drawing from Ashoka's rich research-oriented background",
+              "Ashoka's liberal arts curriculum provides a unique, interdisciplinary background",
+            ].map((item, index) => (
+              <li
+                key={index}
+                className="flex items-start gap-2 text-base sm:text-lg lg:text-xl"
+              >
+                <span className="text-[#66e9fa]">•</span>
+                <span>{item}</span>
+              </li>
+            ))}
           </ul>
         </div>
 
-        {/* Talks and Workshops Section */}
-        <div className="pt-9 font-iceland">
-          <h2 className="text-5xl md:text-3xl mb-3">
-            Talks and Workshops
-          </h2>
-          <p className="text-xl leading-relaxed text-[#98a0b3]">
-            Attendees will have the opportunity to engage with professionals and
-            industry leaders through enlightening talks and interactive
-            workshops, gaining valuable insights into cutting-edge developments
-            in the field.
-          </p>
-        </div>
-        <div className="pt-9 font-iceland">
-          <h2 className="text-5xl md:text-3xl mb-3">
-            Competitions and Collaboration
-          </h2>
-          <p className="text-xl leading-relaxed text-[#98a0b3]">
-            We will have multiple high-stakes competitions with prize money over
-            2 lakhs, designed to foster hands-on problem-solving skills.
-            Additionally, students will get the chance to showcase their ongoing
-            research projects through presentations and exhibitions
-          </p>
-        </div>
+        {/* Sections */}
+        {[
+          {
+            title: "Talks and Workshops",
+            content:
+              "Attendees will have the opportunity to engage with professionals...",
+          },
+          {
+            title: "Competitions and Collaboration",
+            content:
+              "We will have multiple high-stakes competitions with prize money...",
+          },
+        ].map((section, index) => (
+          <div key={index} className="py-8 sm:py-12 font-iceland">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl mb-4">
+              {section.title}
+            </h2>
+            <p className="text-base sm:text-lg lg:text-xl text-[#98a0b3] leading-relaxed">
+              {section.content}
+            </p>
+          </div>
+        ))}
 
-        <div className="mt-4 space-y-5 font-iceland">
-          <h1 className="pt-11 text-5xl md:text-5xl font-iceland">WHY CHIMERA?</h1>
-          <p className="text-xl leading-relaxed text-[#98a0b3] mb-3 font-iceland">
+        {/* Why Chimera Section */}
+        <div className="py-8 sm:py-12 space-y-6 font-iceland">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl">WHY CHIMERA?</h2>
+          <p className="text-lg sm:text-xl italic text-[#98a0b3]">
             chimera [kahy-meer-uh]
           </p>
-          <p className="text-xl leading-relaxed text-[#98a0b3] font-iceland">
+          <p className="text-base sm:text-lg lg:text-xl text-[#98a0b3] leading-relaxed">
             The chimera, in Greek mythology, is a creature composed of parts
             from different animals, often embodying a fantastical amalgamation
             of features. The chimera is depicted as a fire-breathing monster
@@ -105,9 +101,10 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-4 space-y-5 mb-10 font-iceland">
-          <h1 className="pt-11 text-5xl md:text-5xl">IEEE@Ashoka</h1>
-          <p className="text-xl leading-relaxed text-[#98a0b3]">
+        {/* IEEE Section */}
+        <div className="py-8 sm:py-12 space-y-6 font-iceland">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl">IEEE@Ashoka</h2>
+          <p className="text-base sm:text-lg lg:text-xl text-[#98a0b3] leading-relaxed">
             The IEEE Ashoka Student Branch was founded to foster holistic
             development among STEM students at Ashoka University. Our mission is
             to encourage excellence and collaboration across STEM disciplines,
