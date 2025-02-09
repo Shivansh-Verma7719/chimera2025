@@ -5,22 +5,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-interface Competition {
-    id: string;
-    image: string;
-}
-
-const competitions: Competition[] = [
-    {
-        id: 'astro-photography',
-        image: '/images/competitions/astro-photography.png'
-    },
-    {
-        id: 'math-expo',
-        image: '/images/competitions/math-expo.png'
-    },
-    
-];
+import { type Competition, competitions } from "./competitions";
 
 const CompetitionCard = ({ competition }: { competition: Competition }) => {
     const router = useRouter();
@@ -34,7 +19,7 @@ const CompetitionCard = ({ competition }: { competition: Competition }) => {
             className="cursor-pointer relative w-full h-[400px] max-w-[500px] overflow-hidden rounded-lg"
         >
             <Image
-                src={competition.image}
+                src={competition.thumbnailURL}
                 alt={competition.id}
                 fill
                 className="object-contain"

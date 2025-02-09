@@ -8,7 +8,7 @@ export default function About() {
         {/* Hero Section */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12 font-iceland">
           <div className="space-y-4 w-full md:w-2/3">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl tracking-tight">
               CHIMERA 2025
             </h1>
             <h2 className="text-2xl sm:text-3xl text-[#66e9fa]">
