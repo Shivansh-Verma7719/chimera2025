@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
       <Card title="About">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-8 circularstd">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-8 font-iceland">
           <div className="space-y-2 max-w-2xl">
             <h1 className="text-5xl md:text-6xl">CHIMERA 2025</h1>
             <h2 className="text-3xl text-[#66e9fa]">
@@ -26,7 +26,7 @@ export default function Home() {
 
         {/* Main Content */}
         <div className="space-y-8 font-iceland text-xl text-[#98a0b3]">
-          <p className="text-xl">
+          <p className="text-xl font-iceland leading-relaxed">
             IEEE Ashoka is proud to announce Chimera, an inter-university
             celebration of excellence in STEM research and innovation. Our
             objective is to showcase the work of our university&apos;s students
@@ -35,7 +35,7 @@ export default function Home() {
             is especially unique because:
           </p>
 
-          <ul className="pl-8 text-xl leading-relaxed space-y-4">
+          <ul className="pl-8 text-xl leading-relaxed font-iceland space-y-4">
             <li className="relative pl-6">
               <span className="absolute left-0">•</span>
               <span className="block pl-2">
@@ -60,7 +60,7 @@ export default function Home() {
         </div>
 
         {/* Talks and Workshops Section */}
-        <div className="pt-9">
+        <div className="pt-9 font-iceland">
           <h2 className="text-5xl md:text-3xl mb-3">
             Talks and Workshops
           </h2>
@@ -71,7 +71,7 @@ export default function Home() {
             in the field.
           </p>
         </div>
-        <div className="pt-9">
+        <div className="pt-9 font-iceland">
           <h2 className="text-5xl md:text-3xl mb-3">
             Competitions and Collaboration
           </h2>
@@ -83,9 +83,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-4 space-y-5 circularstd">
-          <h1 className="pt-11 text-5xl md:text-5xl circularstd">WHY CHIMERA?</h1>
-          <p className="text-xl leading-relaxed text-[#98a0b3] mb-3 space-mono-regular">
+        <div className="mt-4 space-y-5 font-iceland">
+          <h1 className="pt-11 text-5xl md:text-5xl font-iceland">WHY CHIMERA?</h1>
+          <p className="text-xl leading-relaxed text-[#98a0b3] mb-3 font-iceland">
             chimera [kahy-meer-uh]
           </p>
           <p className="text-xl leading-relaxed text-[#98a0b3] font-iceland">
@@ -105,9 +105,9 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-4 space-y-5 mb-10">
-          <h1 className="pt-11 text-5xl md:text-5xl circularstd">IEEE@Ashoka</h1>
-          <p className="text-xl leading-relaxed text-[#98a0b3] font-iceland">
+        <div className="mt-4 space-y-5 mb-10 font-iceland">
+          <h1 className="pt-11 text-5xl md:text-5xl">IEEE@Ashoka</h1>
+          <p className="text-xl leading-relaxed text-[#98a0b3]">
             The IEEE Ashoka Student Branch was founded to foster holistic
             development among STEM students at Ashoka University. Our mission is
             to encourage excellence and collaboration across STEM disciplines,

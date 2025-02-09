@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { InteractiveHoverButton } from "@/components/ui/Button";
+import Link from "next/link";
 
 export default function Home() {
   const [timeLeft, setTimeLeft] = useState({
@@ -46,9 +47,9 @@ export default function Home() {
         />
       </div>
 
-      <h1 className="glitch text-3xl md:text-5xl lg:text-[5.2rem] mb-4 md:mb-8 mt-6">
+      <h1 className="glitch text-3xl md:text-5xl lg:text-[5.2rem] mb-8 mt-6">
         Chimera{" "}
-        <sub className="text-lg md:text-2xl absolute bottom-2 -right-8 md:-right-12">
+        <sub className="text-lg md:text-2xl absolute -bottom-10 md:-bottom-2 -right-6 md:-right-16">
           2025
         </sub>
       </h1>
@@ -76,11 +77,11 @@ export default function Home() {
         ))}
       </div>
 
-      <div className="w-full max-w-xs px-4">
+      <Link href="competitions" className="w-full max-w-xs px-4">
         <InteractiveHoverButton className="w-full py-4 text-lg md:text-xl font-semibold tracking-wider">
           Register Now
         </InteractiveHoverButton>
-      </div>
+      </Link>
     </div>
   );
 }
