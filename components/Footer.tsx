@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "@heroui/react";
-import { Instagram, Twitter, Mail, MapPin } from "lucide-react";
+import { Instagram, Twitter, Mail, MapPin, Globe2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function Footer() {
@@ -22,6 +22,12 @@ export default function Footer() {
       icon: Mail,
       href: "mailto:ieee.asb@ashoka.edu.in",
       label: "Email",
+    },
+    {
+      id: 4,
+      icon: Globe2,
+      href: "https://ieee-ashoka.in",
+      label: "Website",
     },
   ];
 
@@ -70,7 +76,7 @@ export default function Footer() {
               </div>
               <div className="flex items-center space-x-2">
                 <Mail size={20} />
-                <span>ieee.asb@ashoka.edu.in</span>
+                <a href="mailto:ieee.asb@ashoka.edu.in">ieee.asb@ashoka.edu.in</a>
               </div>
             </div>
           </div>

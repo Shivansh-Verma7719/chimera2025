@@ -37,8 +37,8 @@ export default function ChimeraNavbar() {
   const menuItems = [
     { name: "About", href: "/about" },
     { name: "Competitions", href: "/competitions" },
-    { name: "Speakers", href: "/speakers" },
-    { name: "Schedule", href: "/schedule" },
+    // { name: "Speakers", href: "/speakers" },
+    // { name: "Schedule", href: "/schedule" },
     // { name: "Raffle", href: "/raffle" },
     { name: "Team", href: "/team" },
     // { name: "Sponsors", href: "/sponsors" },
@@ -49,7 +49,7 @@ export default function ChimeraNavbar() {
   return (
     <motion.nav
       animate={{
-        backgroundColor: isMenuOpen ? "rgba(0, 0, 0, 0.7)" : "transparent",
+        backgroundColor: isMenuOpen ? "rgba(0, 0, 0, 0.6)" : "transparent",
         backdropFilter: isMenuOpen ? "blur(12px)" : "blur(0px)",
       }}
       transition={{ duration: 0.3 }}
