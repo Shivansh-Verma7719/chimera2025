@@ -6,6 +6,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { InteractiveHoverButton } from "./ui/Button";
 
 export default function ChimeraNavbar() {
+  const [atScrollTop, setAtScrollTop] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -23,22 +24,32 @@ export default function ChimeraNavbar() {
       }
     };
 
+    const scrollView = document.getElementById("scroll-view");
+
+    const handleScroll = () => {
+      if (scrollView) {
+        setAtScrollTop(scrollView.scrollTop < 30);
+      }
+    }
+
     // Add both mouse and touch event listeners
     document.addEventListener("mousedown", handleClickOutside);
     document.addEventListener("touchstart", handleClickOutside);
+
+    scrollView?.addEventListener("scroll", handleScroll);
 
     return () => {
       // Clean up both listeners
       document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     };
-  }, [isMenuOpen]);
+  }, [isMenuOpen, atScrollTop]);
 
   const menuItems = [
     { name: "About", href: "/about" },
     { name: "Competitions", href: "/competitions" },
-    { name: "Speakers", href: "/speakers" },
-    { name: "Schedule", href: "/schedule" },
+    // { name: "Speakers", href: "/speakers" },
+    // { name: "Schedule", href: "/schedule" },
     // { name: "Raffle", href: "/raffle" },
     { name: "Team", href: "/team" },
     // { name: "Sponsors", href: "/sponsors" },
@@ -49,8 +60,8 @@ export default function ChimeraNavbar() {
   return (
     <motion.nav
       animate={{
-        backgroundColor: isMenuOpen ? "rgba(0, 0, 0, 0.7)" : "transparent",
-        backdropFilter: isMenuOpen ? "blur(12px)" : "blur(0px)",
+        background: isMenuOpen || !atScrollTop ? "rgba(0, 0, 0, 0.65)" : "rgba(0, 0, 0, 0.0)",
+        backdropFilter: isMenuOpen || !atScrollTop ? "blur(12px)" : "blur(0px)",
       }}
       transition={{ duration: 0.3 }}
       className="fixed w-full z-50"

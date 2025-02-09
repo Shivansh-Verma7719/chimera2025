@@ -14,7 +14,7 @@ type TeamSectionProps = {
 const TeamSection = ({ title, members }: TeamSectionProps) => {
   return (
     <div>
-      <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6 sm:mb-8 font-iceland">
+      <h2 className="text-2xl sm:text-3xl text-center mb-6 sm:mb-8 font-circularstd">
         {title}
       </h2>
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-8">
@@ -43,23 +43,18 @@ const TeamSection = ({ title, members }: TeamSectionProps) => {
 
 const Team: React.FC = () => {
   return (
-    <div className="min-h-screen flex justify-center items-center pt-24 sm:pt-36 px-4 sm:px-6">
+    <div className="min-h-screen bg-center bg-fixed flex justify-center items-center pt-32">
       <div
-        className="w-full max-w-5xl py-8 sm:py-16 px-4 sm:px-8 rounded-2xl shadow-lg"
-        style={{ backgroundColor: "#14143d" }}
+        className="w-full max-w-5xl py-8 sm:py-16 px-4 sm:px-8 rounded-2xl shadow-lg content"
       >
         <div className="text-white">
           <div className="text-left mb-8 sm:mb-12">
-            <h1 className="text-3xl sm:text-4xl font-bold mb-2 space-mono-regular">Team</h1>
+            <h1 className="text-3xl sm:text-4xl mb-2 circularstd">Team</h1>
             <div className="flex justify-start items-center mb-4">
               <div className="h-1 w-8 sm:w-12 bg-cyan-300 mr-2"></div>
               <div className="h-1 w-4 sm:w-6 bg-cyan-300 mr-2"></div>
               <div className="h-1 w-2 sm:w-4 bg-cyan-300"></div>
-
             </div>
-            <p className="text-lg font-iceland sm:text-xl text-[#cccccc]">
-              Meet the people behind the scenes
-            </p>
           </div>
 
           <div className="space-y-12 sm:space-y-16">

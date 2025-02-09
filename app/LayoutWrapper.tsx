@@ -127,7 +127,7 @@ export default function LayoutWrapper({
           id="dotsCanvas"
           className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none"
         />
-        <div className="flex-1 relative z-10 overflow-y-auto">
+        <div className="flex-1 relative z-10 overflow-y-auto" id="scroll-view">
           <main>{children}</main>
           <Footer />
         </div>

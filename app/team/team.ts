@@ -132,11 +132,6 @@ export const Faculty = [
       desig: "Events and Operations Team",
     },
     {
-      name: "Kenisha Chandak",
-      imageUrl: "/images/team/Kenisha Chandak.jpg",
-      desig: "Events and Operations Team",
-    },
-    {
       name: "Dheer Jhaveri",
       imageUrl: "/images/team/Dheer Jhaveri.jpeg",
       desig: "Events and Operations Team",
