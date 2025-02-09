@@ -54,7 +54,6 @@ const Team: React.FC = () => {
               <div className="h-1 w-8 sm:w-12 bg-cyan-300 mr-2"></div>
               <div className="h-1 w-4 sm:w-6 bg-cyan-300 mr-2"></div>
               <div className="h-1 w-2 sm:w-4 bg-cyan-300"></div>
-
             </div>
           </div>
 

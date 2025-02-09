@@ -8,12 +8,12 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, children }) => {
   return (
-    <div className="content max-w-5xl mx-auto text-white-900 shadow-lg rounded-xl p-8 relative">
-      <h1 className="text-3xl font-bold text-white-900 text-start mb-6 space-mono-regular">{title}</h1>
-      <div className="flex justify-start items-center mb-8">
-        <span className="w-[80px] h-[6px] bg-cyan-300 mr-2"></span>
-        <span className="w-[30px] h-[6px] bg-cyan-300 mr-2"></span>
-        <span className="w-[10px] h-[6px] bg-cyan-300"></span>
+    <div className="content max-w-5xl mx-auto text-white-900 shadow-lg rounded-xl p-8 relative mb-16">
+      <h1 className="text-3xl sm:text-4xl mb-2 circularstd">{title}</h1>
+      <div className="flex justify-start items-center mb-4">
+        <div className="h-1 w-8 sm:w-12 bg-cyan-300 mr-2"></div>
+        <div className="h-1 w-4 sm:w-6 bg-cyan-300 mr-2"></div>
+        <div className="h-1 w-2 sm:w-4 bg-cyan-300"></div>
       </div>
       <div>{children}</div>
     </div>
