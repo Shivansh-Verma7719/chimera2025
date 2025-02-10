@@ -42,7 +42,7 @@ export default function About() {
             {[
               "It includes a wide array of disciplines, aligned with IEEE's overall goal",
               "It integrates research into the festival, drawing from Ashoka's rich research-oriented background",
-              "Ashoka's liberal arts curriculum provides a unique, interdisciplinary background",
+              "Ashoka's liberal arts curriculum provides a unique, interdisciplinary background for the fest",
             ].map((item, index) => (
               <li
                 key={index}
@@ -56,7 +56,7 @@ export default function About() {
         </div>
 
         {/* Sections */}
-        {[
+        {/* {[
           {
             title: "Talks and Workshops",
             content:
@@ -76,7 +76,7 @@ export default function About() {
               {section.content}
             </p>
           </div>
-        ))}
+        ))} */}
 
         {/* Why Chimera Section */}
         <div className="py-8 sm:py-12 space-y-6 font-iceland">
