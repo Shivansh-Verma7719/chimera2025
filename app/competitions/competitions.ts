@@ -112,7 +112,7 @@ export const competitions: Competition[] = [
 		posterURL: '/images/competitions/math-expo-poster.png',
 		regLink: 'https://forms.gle/bmybNUmpYDcPhBtBA',
 		regDeadline: new Date(2025, 1, 25, 23, 59),
-		teamSize: undefined,
+		teamSize: [1, 2],
 		pitchString: "Join the Math Exposition Competition and put your explanation skills to the test! This event is your chance to explore and present mathematical ideas in creative and engaging ways!",
 		additionalDetails: "Whether you're captivated by abstract theories, applied mathematics, or interdisciplinary concepts, you'll have the opportunity to share your insights with others and inspire a broader audience. Think outside the box to develop innovative and novel ways to visualise and simplify complex concepts, making them more accessible and exciting for everyone. Showcase your passion, enhance your communication skills, and connect with fellow math enthusiasts in this unique exposition experience!",
 		rounds: [

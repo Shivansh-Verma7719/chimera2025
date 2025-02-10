@@ -8,10 +8,10 @@ import { type Competition, type Round } from './competitions'
 
 
 const months: { [a: number]: string } = {
-	1: "Jan",
-	2: "Feb",
-	3: "Mar",
-	4: "Apr",
+	0: "Jan",
+	1: "Feb",
+	2: "Mar",
+	3: "Apr",
 }
 
 const RoundCard = (round: Round) => {
@@ -60,12 +60,12 @@ const CompetitionContent = (competition: Competition) => {
 					<div className="flex flex-col space-y-0 text-left">
 						<a
 							href={competition.regLink}
-							className="text-lg text-[#66e9fa]"
+							className="text-xl bg-[#66e9fa] p-3 mb-2 text-slate-800 w-3/4 transition-transform hover:scale-110 rounded-lg"
 							target="_blank"
 						>
-							Register Here! <span className="text-[#eeeeee]">Deadline: {competition.regDeadline.toDateString()}</span>
+							Register Here! <span className="text-slate-600">Deadline: {competition.regDeadline.toDateString()}</span>
 						</a>
-						<span>
+						<span className="text-xl text-left text-slate-200">
 							Team Size: {teamSizeString}
 						</span>
 					</div>

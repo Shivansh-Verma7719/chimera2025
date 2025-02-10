@@ -53,7 +53,7 @@ export default function Footer() {
                 Contact
               </Link>
               <Link
-                href="/register"
+                href="/competitions"
                 className="text-gray-300 hover:text-white transition-colors"
               >
                 Register
