@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Chimera 2025 - IEEE Ashoka Student Branch",
   keywords: ["Chimera", "IEEE", "STEM Fest"],
   authors: [{ name: "IEEE IT" }],
-  viewport: "width=device-width, initial-scale=1",
+  // viewport: "width=device-width, initial-scale=1",
   robots: "index, follow",
   openGraph: {
     type: "website",
