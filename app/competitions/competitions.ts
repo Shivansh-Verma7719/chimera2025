@@ -35,6 +35,49 @@ export interface Competition {
 
 export const competitions: Competition[] = [
   {
+    id: 'capture-the-flag',
+    redirect: true,
+    name: "Antikythera",
+    subtitle: "Ashoka's First Capture-the-Flag Event",
+    thumbnailURL: '/images/competitions/capture-the-flag.png',
+    posterURL: '/images/competitions/capture-the-flag-poster.png',
+    regLink: 'https://ctf.ieee-ashoka.in',
+    regDeadline: new Date(2025, 1, 23, 12, 0),
+    teamSize: [1, 3],
+    pitchString: "Grab your friends and join us for Ashoka's first-ever Capture-the-Flag event! Test your sleuthing skills in a variety of digital challenges & puzzles, as you compete against other teams to win exciting prizes!",
+    additionalDetails: "Antikythera is Ashoka University's premiere CTF, part of IEEE Ashoka's flagship festival, Chimera 2025. This CTF challenge promises an intense and engaging puzzles across various categories like Web Exploitation, Digital Forensics, Cryptography, OSINT and more! Antikythera's puzzles have been carefully crafted so that everyone, from first-time CTFers or cryptic hunt enthusiasts, to seasoned CTF veterans, can find something to enjoy. So grab your friends, form a team, and join us for an experience that'll leave you scratching your head and wanting more!",
+    rounds: [
+      {
+        title: "Online Round",
+        description: "Join us for an online round, racing against other teams to solve puzzles and prove your mettle, with qualifying teams moving on to the in-person finals.",
+        submissionInstructions: undefined,
+        startDate: new Date(2025, 1, 23, 7, 0),
+        endDate: new Date(2025, 1, 24, 17, 0)
+      },
+      {
+        title: "Final Showdown",
+        description: "Qualifying teams will join us on campus for a day-long mad dash around campus as they try to unveil Chimera's deepest-held secrets",
+        submissionInstructions: undefined,
+        startDate: new Date(2025, 2, 1, 11, 0),
+        endDate: new Date(2025, 2, 1, 17, 0)
+      }
+    ],
+    pool: [
+      {
+        title: "Winner",
+        amount: 15000
+      }, 
+      {
+        title: "First Runner Up",
+        amount: 10000
+      },
+      {
+        title: "Second Runner Up",
+        amount: 5000
+      }
+    ]
+  },
+  {
     id: "astro-photography",
     redirect: true,
     name: "Orion's Lens",
@@ -216,36 +259,5 @@ export const competitions: Competition[] = [
         amount: 10000,
       },
     ],
-  },
-  {
-    id: "coming-soon-2",
-    redirect: false,
-    name: "Coming Soon",
-    subtitle: "More Exciting Competitions Ahead",
-    thumbnailURL: "/images/competitions/coming-soon-poster.png",
-    posterURL: "/images/competitions/coming-soon-poster.png",
-    regLink: "#",
-    regDeadline: new Date(2025, 1, 25, 23, 59),
-    teamSize: undefined,
-    pitchString:
-      "Stay tuned for more exciting competitions! We're preparing something special that you won't want to miss.",
-    additionalDetails:
-      "We're working on bringing you more amazing competitions as part of Chimera 2025. Follow us on social media or check back soon for updates!",
-    rounds: [
-      {
-        title: "To Be Announced",
-        description: "Competition details will be revealed soon.",
-        submissionInstructions: undefined,
-        startDate: new Date(2025, 1, 10, 8, 0),
-        endDate: new Date(2025, 1, 25, 23, 59),
-      },
-    ],
-    judgingCriteria: undefined,
-    pool: [
-      {
-        title: "Prize Pool",
-        amount: 10000,
-      },
-    ],
-  },
+  }
 ];
